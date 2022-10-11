@@ -1,0 +1,120 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Good to see you, how can I help You",
+        "Hi there, how can I help?",
+        "HI there , wanna check our new products."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Ok Bye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "products",
+      "patterns": [
+        "What type of products available?",
+        "List the products",
+        "What products do you sell?",
+        "Can you list the products?"
+      ],
+      "responses": [
+        "We sell all ethinic wears and clothing.",
+        "All types of fashionable traditional wears."
+      ]
+    },
+    {
+      "tag": "Availability",
+      "patterns": [
+        "Do you sell computer?",
+        "Do you sell laptop?",
+        "watch",
+        "smart watch",
+        "TV",
+        "Television",
+        "Bicycle",
+        "Do you sell electronics?",
+        "What kinds of mopeds are there?",
+        "What do you rent?",
+        "Do you sell pendant?",
+        "Lotions"
+      ],
+      "responses": ["No, Sorry you can check our other products."]
+    },
+    {
+      "tag": "emi",
+      "patterns": [
+        "Do you offer emi?",
+        "Can I take loan?",
+        "Can I order on interest?"
+      ],
+      "responses": ["Yes , We offer emi.", "HDFC Bank EMI is available."]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Are you cash only?",
+        "What are the payment options?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and AMEX",
+        "We accept most major credit cards",
+        "We accept Net Banking"
+      ]
+    },
+    {
+      "tag": "opentoday",
+      "patterns": [
+        "Are you open today?",
+        "When do you open today?",
+        "What are your hours today?"
+      ],
+      "responses": [
+        "We're open every day from 9am-9pm",
+        "Our hours are 9am-9pm every day"
+      ]
+    },
+    {
+      "tag": "rental",
+      "patterns": [
+        "Can we rent a moped?",
+        "I'd like to rent a moped",
+        "How does this work?"
+      ],
+      "responses": ["Are you looking to rent today or later this week?"],
+      "context_set": "rentalday"
+    },
+    {
+      "tag": "today",
+      "patterns": ["today"],
+      "responses": [
+        "For rentals today please call 1-800-MYMOPED",
+        "Same-day rentals please call 1-800-MYMOPED"
+      ],
+      "context_filter": "rentalday"
+    }
+  ]
+}
