@@ -13,7 +13,7 @@
         "Hello, thanks for visiting",
         "Good to see you, how can I help You",
         "Hi there, how can I help?",
-        "HI there , wanna check our new products."
+        "Hi there , wanna check our new products."
       ],
       "context_set": ""
     },
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "tag": "Availability",
+      "tag": "availability",
       "patterns": [
         "Do you sell computer?",
         "Do you sell laptop?",
@@ -67,6 +67,7 @@
       "patterns": [
         "Do you offer emi?",
         "Can I take loan?",
+        "Is monthly installment available?",
         "Can I order on interest?"
       ],
       "responses": ["Yes , We offer emi.", "HDFC Bank EMI is available."]
@@ -86,35 +87,42 @@
       ]
     },
     {
-      "tag": "opentoday",
+      "tag": "shirt",
       "patterns": [
-        "Are you open today?",
-        "When do you open today?",
-        "What are your hours today?"
+        "Do you have blue shirt?",
+        "Have yellow shirt?",
+        "shirt",
+        "Is pink shirt available?"
       ],
-      "responses": [
-        "We're open every day from 9am-9pm",
-        "Our hours are 9am-9pm every day"
-      ]
+      "responses": ["yes here you go"]
     },
     {
-      "tag": "rental",
+      "tag": "saree",
       "patterns": [
-        "Can we rent a moped?",
-        "I'd like to rent a moped",
-        "How does this work?"
+        "Do you have blue saree?",
+        "Have yellow saree?",
+        "saree",
+        "Is pink saree available"
       ],
-      "responses": ["Are you looking to rent today or later this week?"],
-      "context_set": "rentalday"
+      "responses": ["yes here you go"]
     },
     {
-      "tag": "today",
-      "patterns": ["today"],
-      "responses": [
-        "For rentals today please call 1-800-MYMOPED",
-        "Same-day rentals please call 1-800-MYMOPED"
+      "tag": "shoe",
+      "patterns": [
+        "Do you have blue shoe?",
+        "Have yellow shoe?",
+        "Is pink shoe available"
       ],
-      "context_filter": "rentalday"
+      "responses": ["yes here you go"]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How much time do you take for delivery?",
+        "Is delivery can be expected wihtin 1 week?",
+        "Do you offer fast delivery?"
+      ],
+      "responses": ["We deliver within 1 weeks across India."]
     }
   ]
 }
