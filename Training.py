@@ -81,15 +81,13 @@ training = np.array(training)
 X_train = list(training[:, 0])
 y_train = list(training[:, 1])
 
-print(len(max(X_train)), len(min(X_train)))
-
 model = Sequential()
 model.add(Dense(128, input_shape=(len(X_train[0]),), activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(30, activation='relu'))
-model.add(Dense(len(y_train[0]), activation='softmax'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(len(y_train[0]), activation='sigmoid'))
 
 adam = Adam(lr=0.001)
 model.compile(loss='categorical_crossentropy',
@@ -98,4 +96,4 @@ model.compile(loss='categorical_crossentropy',
 hist = model.fit(np.array(X_train), np.array(y_train),
                  epochs=150, batch_size=5, verbose=2)  # type: ignore
 
-# model.save('model.h5', hist)  # type: ignore
+model.save('model.h5', hist)  # type: ignore
