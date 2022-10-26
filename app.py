@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 
 from tensorflow.python.keras.models import load_model
 from flask import Flask, request
+from flask_ngrok import run_with_ngrok
 
 intents = json.loads(open('data.json').read())
 model = load_model('model.h5')
@@ -76,7 +77,7 @@ def get_reposnse(intents_list, intent_json):
 
 
 app = Flask(__name__)
-app.static_folder = 'static'
+run_with_ngrok(app)
 
 
 @app.route("/message/get")
