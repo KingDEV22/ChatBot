@@ -9,8 +9,9 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
 from tensorflow.python.keras.models import load_model
-from flask import Flask, request
+from flask import Flask, request, render_template, jsonify
 from flask_ngrok import run_with_ngrok
+from flask_cors import CORS
 
 intents = json.loads(open('data.json').read())
 model = load_model('model.h5')
@@ -77,15 +78,21 @@ def get_reposnse(intents_list, intent_json):
 
 
 app = Flask(__name__)
-run_with_ngrok(app)
+CORS(app)
 
 
-@app.route("/message/get")
+@app.route("/")
+def home():
+    return render_template("base.html")
+
+
+@app.route("/predict", methods=['POST'])
 def get_bot_response():
-    message = request.args.get('msg')  # type: ignore
-    print(message)
+    message = request.get_json().get("message")  # type: ignore
+    print(message, "hu")
     ints = predict_class(message)
-    return get_reposnse(ints, intents)
+    response_message = get_reposnse(ints, intents)
+    return jsonify({"msg": response_message})
 
 
 if __name__ == "__main__":
