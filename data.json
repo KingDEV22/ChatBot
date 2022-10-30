@@ -15,21 +15,26 @@
         "Hi there, how can I help?",
         "Hi there , wanna check our new products."
       ],
-      "context_set": ""
+      "label": "",
+      "type": ""
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye", "Ok Bye"],
+      "patterns": ["Bye", "See you later", "Goodbye", "Ok Bye", "Quit"],
       "responses": [
         "See you later, thanks for visiting",
         "Have a nice day",
         "Bye! Come back again soon."
-      ]
+      ],
+      "label": "",
+      "type": ""
     },
     {
       "tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "responses": ["Happy to help!", "Any time!", "My pleasure"],
+      "label": "",
+      "type": ""
     },
     {
       "tag": "products",
@@ -42,7 +47,104 @@
       "responses": [
         "We sell all ethinic wears and clothing.",
         "All types of fashionable traditional wears."
-      ]
+      ],
+      "label": "",
+      "type": ""
+    },
+    {
+      "tag": "men shirt",
+      "patterns": [
+        "Do you have men's shirt?",
+        "Have cotton men's shirt?",
+        "Do you have party men's shirt?",
+        "Is printed shirt available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "MEN",
+      "type": "shirt"
+    },
+    {
+      "tag": "men trouser",
+      "patterns": [
+        "Do you have men's trouser?",
+        "Have office men's trouser?",
+        "Have deep men's trouser?",
+        "Is printed trouser available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "MEN",
+      "type": "trouser"
+    },
+    {
+      "tag": "kid trouser",
+      "patterns": [
+        "Do you have kid's trouser?",
+        "Have cotton kid's trouser?",
+        "Have kid's trouser?",
+        "Is cartoon design trouser available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "KIDS",
+      "type": "trouser"
+    },
+    {
+      "tag": "kid shirt",
+      "patterns": [
+        "Do you have kid's shirt?",
+        "Have 8 years kid's shirt?",
+        "Is fancy shirt available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "KIDS",
+      "type": "shirt"
+    },
+    {
+      "tag": "kid shoes",
+      "patterns": [
+        "Do you have kid's shoes?",
+        "Have school kid's shoes?",
+        "Do you have chota bheem shoes?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "KIDS",
+      "type": "shoes"
+    },
+    {
+      "tag": "men shoes",
+      "patterns": [
+        "Do you have men's shoes?",
+        "Have office men's shoes?",
+        "Do you have party men's shoes?",
+        "Is sport's shoes available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "MEN",
+      "type": "shoes"
+    },
+    {
+      "tag": "slipper",
+      "patterns": [
+        "Do you have men's slipper?",
+        "Have casual slippers?",
+        "Do you have printed slippers?",
+        "Is cheap slipper present?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "",
+      "type": "slipper"
+    },
+    {
+      "tag": "saree",
+      "patterns": [
+        "Do you have banarashi saree?",
+        "Have tater saree?",
+        "Is cotton printed saree available?",
+        "Do you have printed pure silk saree?",
+        "Is fancy designer saree available?"
+      ],
+      "responses": ["Yes, Click the below highlighted text"],
+      "label": "WOMEN",
+      "type": "saree"
     },
     {
       "tag": "availability",
@@ -60,7 +162,9 @@
         "Do you sell pendant?",
         "Lotions"
       ],
-      "responses": ["No, Sorry you can check our other products."]
+      "responses": ["No, Sorry you can check our other products."],
+      "label": "",
+      "type": ""
     },
     {
       "tag": "emi",
@@ -70,7 +174,9 @@
         "Is monthly installment available?",
         "Can I order on interest?"
       ],
-      "responses": ["Yes , We offer emi.", "HDFC Bank EMI is available."]
+      "responses": ["Yes , We offer emi.", "HDFC Bank EMI is available."],
+      "label": "",
+      "type": ""
     },
     {
       "tag": "payments",
@@ -81,39 +187,10 @@
         "What are the payment options?"
       ],
       "responses": [
-        "We accept VISA, Mastercard and AMEX",
-        "We accept most major credit cards",
-        "We accept Net Banking"
-      ]
-    },
-    {
-      "tag": "shirt",
-      "patterns": [
-        "Do you have blue shirt?",
-        "Have yellow shirt?",
-        "shirt",
-        "Is pink shirt available?"
+        "We accept VISA, Mastercard and AMEX,most major credit cards and Net Banking"
       ],
-      "responses": ["yes here you go"]
-    },
-    {
-      "tag": "saree",
-      "patterns": [
-        "Do you have blue saree?",
-        "Have yellow saree?",
-        "saree",
-        "Is pink saree available"
-      ],
-      "responses": ["yes here you go"]
-    },
-    {
-      "tag": "shoe",
-      "patterns": [
-        "Do you have blue shoe?",
-        "Have yellow shoe?",
-        "Is pink shoe available"
-      ],
-      "responses": ["yes here you go"]
+      "label": "",
+      "type": ""
     },
     {
       "tag": "delivery",
@@ -122,7 +199,9 @@
         "Is delivery can be expected wihtin 1 week?",
         "Do you offer fast delivery?"
       ],
-      "responses": ["We deliver within 1 weeks across India."]
+      "responses": ["We deliver within 1 weeks across India."],
+      "label": "",
+      "type": ""
     }
   ]
 }

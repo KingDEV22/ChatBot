@@ -57,7 +57,8 @@ class Chatbox {
       .then((r) => r.json())
       .then((r) => {
         console.log(r);
-        let msg2 = { name: "Sam", message: r["msg"] };
+        console.log(typeof r);
+        let msg2 = { name: "Sam", message: r["message"] };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
         textField.value = "";

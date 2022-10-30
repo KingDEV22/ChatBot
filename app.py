@@ -69,10 +69,16 @@ def predict_class(sentence):
 def get_reposnse(intents_list, intent_json):
     tag = intents_list[0]['intent']
     list_of_intents = intent_json['intents']
-    result = ""
+    result = {
+        "message": "",
+        "label": "",
+        "type": ""
+    }
     for i in list_of_intents:
         if i['tag'] == tag:
-            result = random.choice(i['responses'])
+            result['message'] = random.choice(i['responses'])
+            result['label'] = i['label']
+            result['type'] = i['type']
             break
     return result
 
@@ -81,18 +87,18 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/")
+@ app.route("/")
 def home():
     return render_template("base.html")
 
 
-@app.route("/predict", methods=['POST'])
+@ app.route("/predict", methods=['POST'])
 def get_bot_response():
     message = request.get_json().get("message")  # type: ignore
     print(message, "hu")
     ints = predict_class(message)
     response_message = get_reposnse(ints, intents)
-    return jsonify({"msg": response_message})
+    return jsonify(response_message)
 
 
 if __name__ == "__main__":

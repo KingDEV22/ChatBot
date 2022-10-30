@@ -94,6 +94,6 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam', metrics=['accuracy'])
 
 hist = model.fit(np.array(X_train), np.array(y_train),
-                 epochs=150, batch_size=5, verbose=2)  # type: ignore
+                 epochs=250, batch_size=5, verbose=2)  # type: ignore
 
 model.save('model.h5', hist)  # type: ignore
